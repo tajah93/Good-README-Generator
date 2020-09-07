@@ -19,36 +19,6 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "instLink",
-      message: "Type in the term 'Installation'."
-    },
-    {
-      type: "input",
-      name: "UsgLink",
-      message: "Type in the term 'Usage'."
-    },
-    {
-      type: "input",
-      name: "licLink",
-      message: "Type in the term 'License'."
-    },
-    {
-      type: "input",
-      name: "contLink",
-      message: "Type in the term 'Contributing'."
-    },
-    {
-      type: "input",
-      name: "testsLink",
-      message: "Type in the term 'Tests'."
-    },
-    {
-      type: "input",
-      name: "quesLink",
-      message: "Type in the term 'Questions'."
-    },
-    {
-      type: "input",
       name: "Installation",
       message: "What are you project's installation instructions?"
     },
@@ -99,8 +69,6 @@ function promptUser() {
 
 
 
-
-
 function generateMD(answers) {
     return `
     
@@ -112,25 +80,32 @@ function generateMD(answers) {
        
 <h2>Table of Contents</h2>
         
-<p>${answers.TableofContents}</p>
+<ul>
+  <li><a href = #ins>Installation</a></li>
+  <li><a href =#use>Usage</a></li>
+  <li><a href=#lic>License</a></li>
+  <li><a href=#contrib>Contributing</a></li>
+  <li><a href=#tests>Tests</a></li>
+  <li><a href=#ques>Questions</a></li>
+ </ul>
        
-<h2>Installation</h2>
+<h2 id=ins>Installation</h2>
         
 <p>${answers.Installation}</p>
         
-<h2>Usage</h2>
+<h2 id=use>Usage</h2>
        
 <p>${answers.Usage}</p>
         
-<h2>License</h2>
+<h2 id=lic>License</h2>
         
 <p>${answers.License}</p>
        
-<h2>Contributing<h/2>
+<h2 id=contrib>Contributing<h/2>
         
 <p>${answers.Contributing}</p>
         
-<h2>Tests</h2>
+<h2 id=tests>Tests</h2>
         
 <p>${answers.Tests}</p>
         
