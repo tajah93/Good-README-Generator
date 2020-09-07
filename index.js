@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile)n;
 
 function promptUser() {
   return inquirer.prompt([
@@ -18,7 +18,7 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "Table of Contents",
+      name: "TableofContents",
       message: "What names would you like in your Table of Contents?"
     },
     {
@@ -51,20 +51,54 @@ function promptUser() {
       type: "input",
       name: "Questions",
       message: "What is your GitHub username?",
-      message: "What is your email address that's linked to your GitHub profile?"
     },
+    {
+      type: "input",
+      name: "Questions",
+      message: "What is your email address that's linked to your GitHub profile?"
+    }
   ]);
 }
 
 function generateMD(answers) {
-    return
-    ' # ${answers.Title}'
-
-    ' ## Description ## '
+    return `
     
+# ${answers.Title}
+
+### Description 
+        
+${answers.Description}
+       
+### Table of Contents
+        
+${answers.TableofContents}
+       
+### Installation
+        
+${answers.Installation}
+        
+### Usage
+       
+${answers.Usage}
+        
+### License
+        
+${answers.License}
+       
+### Contributing
+        
+${answers.Contributing}
+        
+### Tests
+        
+${answers.Tests}
+        
+### Questions
+        
+${answers.Questions}
+
     
-
-
+    `
 }
 
 async function init() {
