@@ -4,6 +4,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+
 function promptUser() {
   return inquirer.prompt([
     {
@@ -18,8 +19,33 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "TableofContents",
-      message: "What names would you like in your Table of Contents?"
+      name: "instLink",
+      message: "Type in the term 'Installation'."
+    },
+    {
+      type: "input",
+      name: "UsgLink",
+      message: "Type in the term 'Usage'."
+    },
+    {
+      type: "input",
+      name: "licLink",
+      message: "Type in the term 'License'."
+    },
+    {
+      type: "input",
+      name: "contLink",
+      message: "Type in the term 'Contributing'."
+    },
+    {
+      type: "input",
+      name: "testsLink",
+      message: "Type in the term 'Tests'."
+    },
+    {
+      type: "input",
+      name: "quesLink",
+      message: "Type in the term 'Questions'."
     },
     {
       type: "input",
@@ -35,7 +61,17 @@ function promptUser() {
       type: "list",
       name: "License",
       message: "What type of license will you be using?",
-      choices: ["MIT", new inquirer.Separator(), "Apache", new inquirer.Separator(), "GPL"]
+      choices: ["MIT", new inquirer.Separator(), "Apache", new inquirer.Separator(), "ISC"],
+      display: function() {
+          if(choices === "MIT"){
+              $("#badge").append("src='https://img.shields.io/badge/License-MIT-yellow.svg'")
+          } else if(choices === "Apache"){
+              $("#badge").append("src='https://img.shields.io/badge/License-Apache%202.0-blue.svg'")
+          } else {
+              $("#badge").append("src='https://img.shields.io/badge/License-ISC-blue.svg'")
+          }
+          display()
+      }
     },
     {
       type: "input",
@@ -61,47 +97,52 @@ function promptUser() {
   ]);
 }
 
+
+
+
+
 function generateMD(answers) {
     return `
     
-<h1>${answers.Title}</h1>
+<h1>${answers.Title} <img id="badge"/></h1>
 
 <h2>Description</h2>
         
-${answers.Description}
+<p>${answers.Description}</p>
        
 <h2>Table of Contents</h2>
         
-${answers.TableofContents}
+<p>${answers.TableofContents}</p>
        
 <h2>Installation</h2>
         
-${answers.Installation}
+<p>${answers.Installation}</p>
         
 <h2>Usage</h2>
        
-${answers.Usage}
+<p>${answers.Usage}</p>
         
 <h2>License</h2>
         
-${answers.License}
+<p>${answers.License}</p>
        
 <h2>Contributing<h/2>
         
-${answers.Contributing}
+<p>${answers.Contributing}</p>
         
 <h2>Tests</h2>
         
-${answers.Tests}
+<p>${answers.Tests}</p>
         
 <h2>Questions</h2>
         
-View my GitHUB profile: <a class=git href=https://github.com/${answers.Questions}>${answers.Questions}</a>
+<p>View my GitHUB profile: <a class=git href=https://github.com/${answers.Questions}>${answers.Questions}</a>
 
-If you have any questions about my project, feel free to email me at <a href=mailto:${answers.EQuestions}> ${answers.EQuestions}</a> with your name, email, and questions!
+If you have any questions about my project, feel free to email me at <a href=mailto:${answers.EQuestions}> ${answers.EQuestions}</a> with your name, email, and questions</p>
 `    
 
 }
+  
 
 async function init() {
     console.log("hi")
@@ -119,4 +160,4 @@ async function init() {
   }
   
   init();
-  
+
