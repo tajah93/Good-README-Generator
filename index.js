@@ -51,10 +51,11 @@ function promptUser() {
       type: "input",
       name: "Questions",
       message: "What is your GitHub username?",
+      url: "https://github.com/"
     },
     {
       type: "input",
-      name: "Questions",
+      name: "EQuestions",
       message: "What is your email address that's linked to your GitHub profile?"
     }
   ]);
@@ -95,8 +96,9 @@ ${answers.Tests}
         
 <h2>Questions</h2>
         
-${answers.Questions}
+View my GitHUB profile: <a class=git href=https://github.com/${answers.Questions}>${answers.Questions}</a>
 
+If you have any questions about my project, feel free to email me at <a href=mailto:${answers.EQuestions}> ${answers.EQuestions}</a> with your name, email, and questions!
 `    
 
 }
