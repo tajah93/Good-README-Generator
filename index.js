@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const writeFileAsync = util.promisify(fs.writeFile)n;
+const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
   return inquirer.prompt([
@@ -63,42 +63,42 @@ function promptUser() {
 function generateMD(answers) {
     return `
     
-# ${answers.Title}
+<h1>${answers.Title}</h1>
 
-### Description 
+<h2>Description</h2>
         
 ${answers.Description}
        
-### Table of Contents
+<h2>Table of Contents</h2>
         
 ${answers.TableofContents}
        
-### Installation
+<h2>Installation</h2>
         
 ${answers.Installation}
         
-### Usage
+<h2>Usage</h2>
        
 ${answers.Usage}
         
-### License
+<h2>License</h2>
         
 ${answers.License}
        
-### Contributing
+<h2>Contributing<h/2>
         
 ${answers.Contributing}
         
-### Tests
+<h2>Tests</h2>
         
 ${answers.Tests}
         
-### Questions
+<h2>Questions</h2>
         
 ${answers.Questions}
 
-    
-    `
+`    
+
 }
 
 async function init() {
