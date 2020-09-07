@@ -17,7 +17,7 @@ function promptUser() {
       message: "How would you describe your project?"
     },
     {
-      type: "list",
+      type: "input",
       name: "Table of Contents",
       message: "What names would you like in your Table of Contents?"
     },
@@ -55,3 +55,32 @@ function promptUser() {
     },
   ]);
 }
+
+function generateMD(answers) {
+    return
+    ' # ${answers.Title}'
+
+    ' ## Description ## '
+    
+    
+
+
+}
+
+async function init() {
+    console.log("hi")
+    try {
+      const answers = await promptUser();
+  
+      const md = generateMD(answers);
+  
+      await writeFileAsync ("READMEGen.md", md);
+  
+      console.log("Successfully wrote to READMEGen.md");
+    } catch(err) {
+      console.log(err);
+    }
+  }
+  
+  init();
+  
