@@ -6,7 +6,7 @@ This generator is able to produce a good README by asking the user a series of q
 
 ## Installation ##
 
-> npm init
+> npm init\
 > npm install inquirer
 
 ## Usage ##
@@ -24,5 +24,5 @@ A series of questions related to your project development must be answered befor
 
 I can be reached at the following for questions:
 
-GitHub: [tajah93](github.com/tajah93)
-Email: [tajah93@hotmail.com]
+GitHub: [tajah93](https://github.com/tajah93)\
+Email: tajah93@hotmail.com
