@@ -25,9 +25,18 @@ The following command will begin the README writing process:
 
 A series of questions related to your project development must be answered before the README is generated. 
 
+### Sample README Using the application ###
+
+[Generated Sample README](https://github.com/tajah93/Good-README-Generator/blob/master/READMEGen.md)
+
 ### Screenshots ###
 
+![Generator Prompts](https://github.com/tajah93/Good-README-Generator/blob/master/GenPrompts.png)
+
 ![Prompts and Generating Process](https://github.com/tajah93/Good-README-Generator/blob/master/GEN.png)
+
+![README Created](https://github.com/tajah93/Good-README-Generator/blob/master/GENREADME.png)
+
 
 ## Questions ##
 
