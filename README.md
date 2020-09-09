@@ -6,9 +6,9 @@ This generator is able to produce a good README by asking the user a series of q
 
 ## Table of Contents ##
 
-** [Installation](#Installation)
-** [Usage](#Usage)
-** [Questions](#Questions)
+* [Installation](#Installation)\
+* [Usage](#Usage)\
+* [Questions](#Questions)\
 
 ## Installation ##
 
