@@ -32,16 +32,6 @@ function promptUser() {
       name: "License",
       message: "What type of license will you be using?",
       choices: ["MIT", new inquirer.Separator(), "Apache", new inquirer.Separator(), "ISC"],
-      display: function() {
-          if(choices === "MIT"){
-              $("#badge").append("src='https://img.shields.io/badge/License-MIT-yellow.svg'")
-          } else if(choices === "Apache"){
-              $("#badge").append("src='https://img.shields.io/badge/License-Apache%202.0-blue.svg'")
-          } else {
-              $("#badge").append("src='https://img.shields.io/badge/License-ISC-blue.svg'")
-          }
-          display()
-      }
     },
     {
       type: "input",
@@ -64,15 +54,23 @@ function promptUser() {
       name: "EQuestions",
       message: "What is your email address that's linked to your GitHub profile?"
     }
-  ]);
+    ]) 
 }
-
+// .then(function(answers) {
+//     if(answers.License === "MIT"){
+//         $("#badge").append("")
+//     } else if(answers.license === "Apache"){
+//         $("#badge").append("src='https://img.shields.io/badge/License-Apache%202.0-blue.svg'")
+//     } else {
+//         $("#badge").append("src='https://img.shields.io/badge/License-ISC-blue.svg'")
+//     }
+// })
 
 
 function generateMD(answers) {
     return `
     
-<h1>${answers.Title} <img id="badge"/></h1>
+<h1>${answers.Title} <img id="badgeMIT" src="${answers.source}"/></h1>
 
 <h2>Description</h2>
         
@@ -123,7 +121,13 @@ async function init() {
     console.log("hi")
     try {
       const answers = await promptUser();
-  
+      if(answers.License === "MIT"){
+        answers.source = 'https://img.shields.io/badge/License-MIT-yellow.svg'
+      } else if(answers.License === "Apache"){
+        answers.source = 'https://img.shields.io/badge/License-Apache%202.0-blue.svg' 
+      } else {
+        answers.source = 'https://img.shields.io/badge/License-ISC-blue.svg'
+      }
       const md = generateMD(answers);
   
       await writeFileAsync ("READMEGen.md", md);

@@ -1,10 +1,10 @@
 
     
-<h1>jjg <img id="badge"/></h1>
+<h1>juik <img id="badgeMIT" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></h1>
 
 <h2>Description</h2>
         
-<p>fjgj</p>
+<p>ddd</p>
        
 <h2>Table of Contents</h2>
         
@@ -19,11 +19,11 @@
        
 <h2 id=ins>Installation</h2>
         
-<p>djfj</p>
+<p>dfdr</p>
         
 <h2 id=use>Usage</h2>
        
-<p>djdj</p>
+<p>adad</p>
         
 <h2 id=lic>License</h2>
         
@@ -31,14 +31,14 @@
        
 <h2 id=contrib>Contributing<h/2>
         
-<p style=font-size:small>djdjd</p>
+<p>sff</p>
         
-<h2 id=tests style=font-size:larger>Tests</h2>
+<h2 id=tests style=font-size:smaller>Tests</h2>
         
-<p style=font-size:small>dnddn'</p>
+<p style=font-size:smaller>sfsf</p>
         
-<h2 style=font-size:x-large>Questions</h2>
+<h2 style=font-size:smaller>Questions</h2>
         
-<p style=font-size:small>View my GitHUB profile: <a class=git href=https://github.com/djdj>djdj</a></p>
+<p style=fornt-size:smaller>View my GitHUB profile: <a class=git href=https://github.com/ads>ads</a>
 
-<p style=font-size:small>If you have any questions about my project, feel free to email me at <a href=mailto:ddj> ddj</a> with your name, email, and questions</p>
+If you have any questions about my project, feel free to email me at <a href=mailto:adad> adad</a> with your name, email, and questions</p>
