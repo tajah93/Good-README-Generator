@@ -4,6 +4,12 @@
 
 This generator is able to produce a good README by asking the user a series of questions regarding their project using the command line in the terminal and Node.js. After the user finishes all questions, a nice, professional README is created for them to use. This easy-to-use generator allows the user to spend less time writing a good README and more time on the actual project. 
 
+## Table of Contents ##
+
+** [Installation](#Installation)
+** [Usage](#Usage)
+** [Questions](#Questions)
+
 ## Installation ##
 
 > npm init\
