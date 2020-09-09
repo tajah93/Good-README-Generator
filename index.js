@@ -99,17 +99,17 @@ function generateMD(answers) {
         
 <p>${answers.License}</p>
        
-<h2 id=contrib>Contributing<h/2>
+<h2 id=contrib>Contributing</h2>
         
 <p>${answers.Contributing}</p>
         
-<h2 id=tests style=font-size:smaller>Tests</h2>
+<h2 id=tests>Tests</h2>
         
-<p style=font-size:smaller>${answers.Tests}</p>
+<p>${answers.Tests}</p>
         
-<h2 style=font-size:smaller>Questions</h2>
+<h2>Questions</h2>
         
-<p style=fornt-size:smaller>View my GitHUB profile: <a class=git href=https://github.com/${answers.Questions}>${answers.Questions}</a>
+<p>View my GitHUB profile: <a class=git href=https://github.com/${answers.Questions}>${answers.Questions}</a>
 
 If you have any questions about my project, feel free to email me at <a href=mailto:${answers.EQuestions}> ${answers.EQuestions}</a> with your name, email, and questions</p>
 `    
